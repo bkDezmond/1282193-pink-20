@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo">
         <img
           src="https://via.placeholder.com/150x150"
-          width="150"
-          height="150"
+          width="74"
+          height="23"
           alt="Логотип фотоприложения Пинк"
         />
       </a>
@@ -21,22 +23,22 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a>
+              <a class="site-list__link">
                 Главная
               </a>
             </li>
             <li class="site-list__item">
-              <a href="photo.html">
+              <a class="site-list__link" href="photo.html">
                 Фотографии
               </a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">
+              <a class="site-list__link" href="form.html">
                 Конкурс
               </a>
             </li>
             <li class="site-list__item">
-              <a href="">
+              <a class="site-list__link" href="">
                 Html Academy
               </a>
             </li>
@@ -47,9 +49,10 @@
         <h1 class="intro__header intro__header--toggle">
           Взгляните на жизнь иначе!
         </h1>
-        <div class="intro__download">
-          <a class="download" href="">Скачать приложение</a>
-          <ul class="apps">
+      </div>
+        <div class="apps">
+          <a class="apps__download" href="">Скачать приложение</a>
+          <ul class="apps__items">
             <li class="apps__item apple">
               <a class="apps__link" href="">
                 apple
@@ -73,7 +76,7 @@
         </div>
       </div>
     </header>
-    <main class="page-main">
+    <main>
       <h1 class="visually-hidden">Информация о приложении</h1>
       <section class="advantages">
         <h2 class="visually-hidden">Наши преимущества</h2>
@@ -84,33 +87,35 @@
         <div class="advantages__wrapper">
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--mood">
-              <h3 class="advantages__title">Поднимает настроение</h3>
+              <h3 class="advantages__list-title">Поднимает настроение</h3>
               <p class="advantages__description">
                 Приложение позволит вам победить осеннюю хандру и депрессию
                 буквально в несколько кликов!
               </p>
             </li>
             <li class="advantages__item advantages__item--world">
-              <h3 class="advantages__title">Меняет мир вокруг</h3>
+              <h3 class="advantages__list-title">Меняет мир вокруг</h3>
               <p class="advantages__description">
                 Сделайте снимок и украсьте его смайликом или текстовой подписью,
                 чтобы усилить эффект
               </p>
             </li>
             <li class="advantages__item advantages__item--friends">
-              <h3 class="advantages__title">Заводит новых друзей</h3>
+              <h3 class="advantages__list-title">Заводит новых друзей</h3>
               <p class="advantages__description">
                 Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
                 заводите новых друзей
               </p>
             </li>
-          </ul>
+          <li class="advantages__item advantages__phone-img">
           <img
-            src="https://via.placeholder.com/150x150"
-            width="150"
-            height="150"
+            src="img/iphone-screen-mobile@1x.png"
+            width="157"
+            height="320"
             alt="фото iPhone"
           />
+          </li>
+          </ul>
         </div>
       </section>
       <section class="reviews">
