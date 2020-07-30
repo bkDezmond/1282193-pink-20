@@ -1,8 +1,8 @@
-.advantages {
-  outline: 1px solid @basic-red;
+.advantages__wrapper {
+  .container();
 }
 
-.advantages__title {
+.advantages__text {
   color: @basic-blue;
   font-size: 24px;
   line-height: 120%;
@@ -13,14 +13,95 @@
   background-color: @basic-gray;
   list-style: none;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .advantages__list-title {
-  font-weight: @body-font-weight + 400;
+  font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+.advantages__item {
+  grid-column: -1;
+
+  @media (min-width: @desktop-width) {
+    grid-column: auto;
+  }
 }
 
 .advantages__description {
   color: @basic-blue;
   font-size: 14px;
-  font-weight: @body-font-weight + 100;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    line-height: 24px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+
+    &--desktop {
+      font-size: 18px;
+      line-height: 30px;
+      text-align: left;
+    }
+  }
+}
+
+.advantages__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: left;
+
+  @media (min-width: @desktop-width) {
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+.advantages__24-hours {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.advantages__learn-more {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: @basic-red;
+  text-decoration: underline;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }

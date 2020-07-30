@@ -1,23 +1,40 @@
-.gallery {
-  outline: 1px solid @basic-red;
+.gallery__wrapper {
+  .container();
+}
+
+.gallery__list {
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .gallery__title {
   color: @basic-blue;
   font-size: 14px;
-  font-weight: @body-font-weight + 100;
-  line-height: @body-line-height + 6px;
+  font-weight: 400;
+  line-height: 30px;
   text-align: center;
 }
 
 .gallery__item {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
   background-color: @basic-cream;
 }
 
 .gallery__pin {
   font-size: 12px;
-  font-weight: @body-font-weight + 400;
-  line-height: @body-line-height;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   color: @basic-white;
@@ -26,30 +43,26 @@
 
 .gallery__post-author {
   font-size: 14px;
-  font-style: @body-font-style;
-  font-weight: @body-font-weight + 400;
-  line-height: @body-line-height;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .gallery__post-time {
   font-size: 12px;
-  font-weight: @body-font-weight;
-  line-height: @body-line-height;
   color: @basic-blue;
+  text-transform: uppercase;
 }
 
 .gallery__comment {
   font-size: 14px;
-  font-weight: @body-font-weight + 100;
-  line-height: @body-line-height;
+  font-weight: 400;
   color: @basic-blue;
   text-align: left;
 }
 
 .gallery__likes {
   font-size: 12px;
-  font-weight: @body-font-weight + 100;
-  line-height: @body-line-height;
+  font-weight: 400;
   text-transform: uppercase;
   color: @basic-red;
 }
