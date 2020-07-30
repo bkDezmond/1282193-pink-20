@@ -1,11 +1,13 @@
-.site-list {
-  list-style: none;
-  text-transform: uppercase;
-}
-
 .site-list__link {
-  font-weight: @body-font-weight + 400;
+  font-weight: 700;
   line-height: 32px;
+  font-style: normal;
   color: @basic-white;
   text-decoration: none;
+
+  @media (min-width: @desktop-width) {
+    font-weight: normal;
+    line-height: 18px;
+    text-transform: none;
+  }
 }

@@ -1,9 +1,18 @@
-.apps {
-  background-color: @basic-dark-blue;
+.apps--mobile {
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    background-color: @basic-blue;
+  }
 }
 
 .apps__items {
-  padding-bottom: 38px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: min-content min-content 1fr;
   list-style: none;
   color: @basic-white;
 }
@@ -14,7 +23,7 @@
 }
 
 .apps__download {
-  font-weight: @body-font-weight + 400;
+  font-weight: 700;
   color: @basic-white;
   text-decoration: none;
   border: 3px solid @basic-white;
@@ -24,4 +33,10 @@
 .apps__link {
   color: @basic-white;
   text-decoration: none;
+}
+
+.get-app-on {
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
