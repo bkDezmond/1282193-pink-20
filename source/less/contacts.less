@@ -1,43 +1,94 @@
+.contacts__wrapper {
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content min-content;
+  }
+}
+
 .contacts__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 45px;
   font-size: 24px;
   line-height: 120%;
   text-align: center;
   color: @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    font-size: 40px;
+    line-height: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
-.contacts__tel {
-  font-weight: 700;
-  text-align: center;
-}
-
-.contacts__phone {
-  font-size: 24px;
-  text-align: center;
-  text-decoration: none;
-  color: @basic-red;
-}
-
-.contacts__write {
-  font-weight: 700;
-  text-align: center;
-}
-
-.contacts__mail {
-  font-size: 24px;
-  text-align: center;
-  text-decoration: none;
-  color: @basic-red;
-}
-
+.contacts__tel,
+.contacts__write,
 .contacts__adress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 13px;
+  line-height: 25px;
   font-weight: 700;
+  font-style: normal;
   text-align: center;
+  color: @basic-blue;
 }
 
+.contacts__phone,
+.contacts__mail,
 .contacts__adress-street {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 24px;
   font-weight: 300;
+  line-height: 33px;
+  font-style: normal;
   text-align: center;
   text-decoration: none;
   color: @basic-red;
+}
+
+.contacts__tel-mobile,
+.contacts__write-mail,
+.contacts__adress-street {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+}
+
+.contacts__welcome {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: auto;
+  }
+}
+
+.contacts__write-us {
+  @media (min-width: @desktop-width) {
+    order: 2;
+  }
 }

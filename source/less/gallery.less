@@ -2,6 +2,10 @@
   .container();
 }
 
+.gallery__main-wrapper {
+  .container();
+}
+
 .gallery__list {
   display: grid;
   justify-content: center;
@@ -24,12 +28,20 @@
   text-align: center;
 }
 
-.gallery__item {
-  display: grid;
-  justify-items: center;
-  align-items: center;
+// пока что так на пост дня сделал
 
+.gallery__item {
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  align-items: start;
   background-color: @basic-cream;
+
+  &--photo-of-day {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+  }
 }
 
 .gallery__pin {
@@ -45,6 +57,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
+  margin-right: 5px;
 }
 
 .gallery__post-time {
@@ -53,11 +66,21 @@
   text-transform: uppercase;
 }
 
+.gallery__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin: 0;
+  margin-top: auto;
+  margin-left: 27px;
+  margin-right: 27px;
+}
+
 .gallery__comment {
   font-size: 14px;
   font-weight: 400;
   color: @basic-blue;
-  text-align: left;
 }
 
 .gallery__likes {
@@ -65,4 +88,17 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @basic-red;
+}
+
+.gallery__item img {
+  margin-bottom: 32px;
+}
+
+.gallery__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 27px;
+  margin-top: 0;
+  margin-bottom: 0;
 }

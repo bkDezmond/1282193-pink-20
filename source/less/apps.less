@@ -5,7 +5,8 @@
     justify-content: center;
     align-items: center;
     margin-top: auto;
-    background-color: @basic-blue;
+    width: 115%;
+    background-color: @basic-dark-blue;
   }
 }
 
@@ -13,21 +14,41 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: min-content min-content 1fr;
+  padding: 0;
   list-style: none;
   color: @basic-white;
 }
 
 .apps__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
+  line-height: 24px;
+  font-style: normal;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .apps__download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 55px;
+  margin-top: 40px;
   font-weight: 700;
   color: @basic-white;
   text-decoration: none;
   border: 3px solid @basic-white;
   border-radius: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .apps__link {

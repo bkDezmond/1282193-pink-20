@@ -1,13 +1,22 @@
 .site-list__link {
+  position: relative;
+  display: block;
+  padding-top: 12px;
+  padding-right: 21px;
+  padding-bottom: 13px;
+  padding-left: 21px;
   font-weight: 700;
   line-height: 32px;
+  text-align: center;
   font-style: normal;
   color: @basic-white;
   text-decoration: none;
+  box-shadow: 0 1px 0 @basic-black, inset 0 1px 0 @basic-white-shadow;
 
   @media (min-width: @desktop-width) {
     font-weight: normal;
     line-height: 18px;
     text-transform: none;
+    box-shadow: none;
   }
 }
