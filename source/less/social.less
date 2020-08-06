@@ -1,5 +1,28 @@
 .social__list {
   display: flex;
-  justify-content: space-between;
+  gap: 14px;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
   list-style: none;
+}
+
+.social__item {
+  position: relative;
+  width: 47px;
+  height: 47px;
+  padding: 14px;
+  border: 3px solid @basic-gray-white;
+  border-radius: 50%;
+}
+
+.social__link path {
+  fill: @basic-red;
+}
+
+.social__icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }

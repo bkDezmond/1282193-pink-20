@@ -1,5 +1,34 @@
+.copyright {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 130px;
+  }
+}
+
 .copyright__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: @basic-red;
 }

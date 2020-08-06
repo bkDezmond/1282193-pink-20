@@ -1,32 +1,61 @@
-.advantages__wrapper {
-  .container();
+.advantages__section {
+  background-color: @basic-gray;
 }
 
 .advantages__text {
-  color: @basic-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 24px;
   line-height: 120%;
   text-align: center;
+  color: @basic-blue;
+
+  &--offer {
+    margin-bottom: 120px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+
+    &--offer {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .advantages__list {
-  background-color: @basic-gray;
+  position: relative;
+  padding: 0;
   list-style: none;
   text-align: center;
 
   @media (min-width: @tablet-width) {
     display: grid;
+    padding-left: 50%;
+    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    margin: 30px;
+    text-align: center;
   }
 }
 
 .advantages__list-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
   font-weight: 700;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: start;
     font-size: 24px;
     line-height: 18px;
     text-align: left;
@@ -41,18 +70,23 @@
 
 .advantages__item {
   grid-column: -1;
+  margin-bottom: 43px;
 
   @media (min-width: @desktop-width) {
+    display: grid;
     grid-column: auto;
   }
 }
 
 .advantages__description {
-  color: @basic-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   text-align: center;
+  color: @basic-blue;
 
   @media (min-width: @tablet-width) {
     line-height: 24px;
@@ -103,5 +137,26 @@
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 24px;
+  }
+}
+
+.advantages__list-img {
+  display: none;
+
+  &--mobile {
+    display: initial;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: initial;
+    position: relative;
+    order: -1;
+    left: 0;
   }
 }
