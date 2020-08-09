@@ -7,16 +7,20 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page-header page-header--index">
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__wrapper">
         <a class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
         <img
           src="img/logo-pink-white-mobile.svg"
           width="74"
           height="23"
           alt="Логотип фотоприложения Пинк"
         />
+      </picture>
         </a>
           <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -45,13 +49,15 @@
           </ul>
         </div>
       </nav>
-      <div class="intro intro--index container">
-        <h1 class="intro__header intro__header--toggle">
+      <div class="page__header-wrapper">
+        <h1 class="page__header-top page__header--toggle">
           Взгляните на жизнь иначе!
         </h1>
-
+      <div class="intro intro--index container">
+        <h1 class="page__header-bot page__header--toggle">
+          Взгляните на жизнь иначе!
+        </h1>
         <div class="apps apps--mobile">
-
           <a class="apps__download" href="">Скачать приложение</a>
           <ul class="apps__items">
             <li class="apps__item apple">
@@ -71,7 +77,6 @@
                   <path id="c-4-1-7-3-8-4" fill="#A4C639" d="M39.198,15.679L39.198,15.679c1.595,0,2.886,1.292,2.886,2.885v12.378 c0,1.595-1.291,2.886-2.886,2.886l0,0c-1.594,0-2.885-1.291-2.885-2.886V18.564C36.313,16.97,37.604,15.679,39.198,15.679z"/>
                   <path fill="#A4C639" d="M8.03,11.967h26.026c-0.039-2.783-1.234-5.322-3.187-7.275l2.446-4.235c0.082-0.146,0.031-0.331-0.112-0.415 c-0.146-0.084-0.331-0.034-0.415,0.111L30.416,4.26c-2.052-1.853-6.249-3.4-9.374-3.4l0,0c-3.016,0-7.322,1.547-9.374,3.4 L9.296,0.152C9.213,0.007,9.027-0.042,8.881,0.041C8.736,0.125,8.686,0.311,8.77,0.456l2.445,4.235 C9.265,6.645,8.068,9.184,8.03,11.967z M25.323,6.804c-0.002-0.805,0.664-1.46,1.488-1.462c0.826-0.002,1.494,0.648,1.498,1.454 c0,0.002,0,0.005,0,0.008c0.002,0.805-0.664,1.46-1.49,1.462c-0.823,0.002-1.493-0.649-1.496-1.454 C25.323,6.81,25.323,6.807,25.323,6.804z M14.18,6.804c-0.001-0.805,0.665-1.46,1.489-1.462c0.824-0.002,1.494,0.648,1.497,1.454 c0,0.002,0,0.005,0,0.008c0.002,0.805-0.664,1.46-1.488,1.462c-0.825,0.002-1.495-0.649-1.498-1.454 C14.18,6.81,14.18,6.807,14.18,6.804z"/>
                 </svg>
-
               </a>
             </li>
             <li class="apps__item microsoft">
@@ -95,8 +100,7 @@
           </ul>
         </div>
       </div>
-        </div>
-      </div>
+    </div>
     </header>
     <main>
       <h1 class="visually-hidden">Информация о приложении</h1>
@@ -113,10 +117,14 @@
                 Приложение позволит вам победить осеннюю хандру и депрессию
                 буквально в несколько кликов!
               </p>
-              <img class="advantages__list-img" src="img/iphone-screen-1-desktop@1x.png"
-              width="290"
-              height="300"
-              alt="фотоприложение Пинк">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/iphone-screen-1-tablet@1x.png 1x, img/iphone-screen-1-tablet@2x.png 2x">
+                <img class="advantages__list-img" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png"
+                width="186"
+                height="382"
+                alt="фотоприложение Пинк">
+            </picture>
             </li>
 
             <li class="advantages__item advantages__item--world">
@@ -125,10 +133,14 @@
                 Сделайте снимок и украсьте его смайликом или текстовой подписью,
                 чтобы усилить эффект
               </p>
-              <img class="advantages__list-img" src="img/iphone-screen-2-desktop@1x.png"
-              width="290"
-              height="300"
-              alt="фотоприложение Пинк">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/iphone-screen-2-tablet@1x.png 1x, img/iphone-screen-2-tablet@2x.png 2x">
+                <img class="advantages__list-img" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png"
+                width="186"
+                height="382"
+                alt="фотоприложение Пинк">
+            </picture>
             </li>
 
             <li class="advantages__item advantages__item--friends">
@@ -137,10 +149,14 @@
                 Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
                 заводите новых друзей
               </p>
-              <img class="advantages__list-img advantages__list-img--mobile" src="img/iphone-screen-3-desktop@1x.png"
-              width="290"
-              height="300"
-              alt="фотоприложение Пинк">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+                <img class="advantages__list-img advantages__list-img--mobile" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png"
+                width="186"
+                height="382"
+                alt="фотоприложение Пинк">
+            </picture>
             </li>
           </ul>
         </div>
@@ -260,12 +276,16 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo">
-          <img
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+
+              <img
             src="img/logo-pink-blue-mobile.svg"
             width="145"
             height="40"
             alt="Логотип фотоприложения Пинк"
           />
+        </picture>
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
