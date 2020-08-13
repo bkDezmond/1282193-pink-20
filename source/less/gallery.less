@@ -31,6 +31,8 @@
 // пока что так на пост дня сделал
 
 .gallery__item {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-items: start;
@@ -42,15 +44,6 @@
     margin-bottom: 40px;
     text-align: center;
   }
-}
-
-.gallery__pin {
-  font-size: 12px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  color: @basic-white;
-  background-color: @basic-red;
 }
 
 .gallery__post-author {
@@ -88,10 +81,32 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @basic-red;
+
+  @media (min-width: @tablet-width) {
+    &--day {
+      order: -1;
+      align-self: flex-end;
+      margin: 0;
+      margin-right: 15px;
+      padding: 0;
+    }
+  }
 }
 
-.gallery__item img {
-  margin-bottom: 32px;
+.gallery__likes-img {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  width: 13px;
+  height: 12px;
+  fill: @basic-red;
+
+  @media (min-width: @tablet-width) {
+    &--tablet {
+      top: 30px;
+      right: 15px;
+    }
+  }
 }
 
 .gallery__info {
@@ -101,4 +116,50 @@
   margin: 27px;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.gallery__photo-of-the-day {
+  width: 100%;
+}
+
+.gallery__image-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__image {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.gallery__post-of-day-wrapper {
+  position: relative;
+  margin: 0;
+}
+
+.gallery__pin {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 20px;
+  width: 140px;
+  height: 36px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: @basic-white;
+  background-color: @basic-red;
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 54px;
+    right: 125px;
+  }
 }
