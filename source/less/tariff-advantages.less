@@ -3,11 +3,27 @@
   background-color: @basic-white;
 }
 
-.tariff-advantages__item {
-  font-size: 14px;
+.tariff-advantages__item,
+.tariff-advantages__yes,
+.tariff-advantages__no {
+  align-items: center;
+  padding-left: 20px;
   font-weight: 400;
+  font-size: 14px;
   line-height: 30px;
-  text-align: left;
-  text-transform: uppercase;
   color: @basic-blue;
+
+  border: 2px solid @basic-gray;
+
+  @media (max-width: @mobile-width-only) {
+    text-transform: uppercase;
+  }
+}
+
+.tariff-advantages__text {
+  display: none;
+
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
 }
