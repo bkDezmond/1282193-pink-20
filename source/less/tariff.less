@@ -10,8 +10,56 @@
   text-transform: uppercase;
   color: @basic-white;
   background-color: @basic-blue;
+
+  &--empty {
+    background-color: @basic-cream;
+  }
 }
 
 .tariff__price {
   line-height: 30px;
+}
+
+.tariff__list {
+  width: 940px;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: @basic-cream;
+
+  @media (max-width: @mobile-width-only) {
+    transform: translateX(-12%);
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    transform: translateX(0);
+    min-width: 940px;
+  }
+}
+
+.tariff__wrapper {
+  overflow: hidden;
+
+  @media (max-width: @mobile-width-only) {
+    width: auto;
+  }
+}
+
+.tariff__section {
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.tariff__toggles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
