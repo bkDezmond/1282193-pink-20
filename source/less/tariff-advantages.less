@@ -3,9 +3,9 @@
   background-color: @basic-white;
 }
 
-.tariff-advantages__item,
-.tariff-advantages__yes,
-.tariff-advantages__no {
+.tariff-advantages__item {
+  width: 276px;
+  height: 59px;
   align-items: center;
   padding-left: 20px;
   font-weight: 400;
@@ -17,6 +17,16 @@
 
   @media (max-width: @mobile-width-only) {
     text-transform: uppercase;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 153px;
+    height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 233px;
+    height: 59px;
   }
 }
 

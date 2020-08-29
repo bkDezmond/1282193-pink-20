@@ -322,9 +322,10 @@
           Затмите их всех!<br />
           Выкладывайте все, что накопилось в телефоне!
         </p>
+        <div class="upload__background">
         <div class="upload__wrapper container">
           <div class="upload__section">
-            <picture>
+            <picture class="upload__img">
               <source media="min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
               <source media="min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
             <img
@@ -333,18 +334,50 @@
               height="180"
               alt="Фото пользователей"
             />
-          </picture>
-      </div>
-          <div class="upload__tools"></div>
+            </picture>
+          </div>
+          <div class="upload__tools">
+          <ul class="upload__tools-list tools">
+            <li class="tools__item">
+              <button class="tools__button tools__crop" type="submit"><span class="visually-hidden">Обрезать фото</span>
+                <svg class="tools__img tools__img--current" width="44" height="44">
+                  <use xlink:href="img/sprite.svg#crop-icon"></use>
+                </svg>
+              </button>
+              <div class="tools__scale-crop tools__scale tools__scale--current"></div>
+              <div class="tools__toggle-crop tools__toggle tools__toggle--current"></div>
+            </li>
+            <li class="tools__item">
+              <button class="tools__button tools__fill" type="submit"><span class="visually-hidden">Заливка фото</span>
+                <svg class="tools__img" width="44" height="44">
+                  <use xlink:href="img/sprite.svg#fill-icon"></use>
+                </svg>
+              </button>
+              <div class="tools__scale tools__scale-fill"></div>
+              <div class="tools__toggle-fill tools__toggle"></div>
+            </li>
+            <li class="tools__item">
+              <button class="tools__button tools__contrast" type="submit"><span class="visually-hidden">Контраст фото</span>
+                <svg class="tools__img" width="32" height="32">
+                  <use xlink:href="img/sprite.svg#contrast-icon"></use>
+                </svg>
+              </button>
+              <div class="tools__scale tools__scale-contrast"></div>
+              <div class="tools__toggle-contrast tools__toggle"></div>
+            </li>
+          </ul>
+          <div class="tools__line"></div>
+          </div>
           <div class="upload__buttons">
             <button class="upload__post" type="submit">Запостить</button>
             <button class="upload__reset" type="reset">Отмена</button>
           </div>
         </div>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="page-footer__wrapper container">
         <a class="page-footer__logo">
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
