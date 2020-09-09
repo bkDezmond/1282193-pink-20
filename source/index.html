@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page__body">
-    <header class="page-header page-header--index">
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+    <header class="page-header page-header--index page-header--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <a class="page-header__logo">
             <picture>
@@ -70,7 +70,7 @@
               >Скачать приложение</a
             >
             <ul class="apps__items">
-              <li class="apps__item apple">
+              <li class="apps__item apps__item--apple">
                 <a
                   class="apps__link"
                   href="https://www.apple.com/ru/ios/app-store/"
@@ -81,7 +81,7 @@
                   </svg>
                 </a>
               </li>
-              <li class="apps__item android">
+              <li class="apps__item apps__item--android">
                 <a class="apps__link" href="https://play.google.com/store">
                   <span class="visually-hidden">android</span>
                   <svg class="apps__android-img" width="42" height="47">
@@ -89,7 +89,7 @@
                   </svg>
                 </a>
               </li>
-              <li class="apps__item microsoft">
+              <li class="apps__item apps__item--microsoft">
                 <a
                   class="apps__link"
                   href="https://www.microsoft.com/ru-tm/store/b/home"
@@ -113,16 +113,22 @@
       <h1 class="visually-hidden">Информация о приложении</h1>
       <section class="advantages">
         <h2 class="visually-hidden">Наши преимущества</h2>
-        <p class="advantages__text">Устали от серости мегаполиса?</p>
-        <p class="advantages__text advantages__text--offer">
-          Нам есть, что вам предложить!
-        </p>
-        <div class="advantages__section">
+        <div class="container">
+          <p class="advantages__text">Устали от серости мегаполиса?</p>
+          <p class="advantages__text advantages__text--offer">
+            Нам есть, что вам предложить!
+          </p>
+        </div>
+        <div class="advantages__section advatages__cover">
           <div class="advantages__wrapper container">
             <ul class="advantages__list">
               <li class="advantages__item advantages__item--mood">
-                <h3 class="advantages__list-title">Поднимает настроение</h3>
-                <p class="advantages__description">
+                <h3 class="advantages__list-title advantages__list-title--mood">
+                  Поднимает настроение
+                </h3>
+                <p
+                  class="advantages__description advantages__description--mood"
+                >
                   Приложение позволит вам победить осеннюю хандру и депрессию
                   буквально в несколько кликов!
                 </p>
@@ -166,7 +172,7 @@
                     "
                   />
                   <img
-                    class="advantages__list-img"
+                    class="advantages__list-img advantages__list-img--mood"
                     src="img/iphone-screen-mobile@1x.png"
                     srcset="img/iphone-screen-mobile@2x.png"
                     width="186"
@@ -177,10 +183,17 @@
               </li>
 
               <li class="advantages__item advantages__item--world">
-                <h3 class="advantages__list-title">Меняет мир вокруг</h3>
-                <p class="advantages__description">
+                <h3
+                  class="advantages__list-title advantages__list-title--world"
+                >
+                  Меняет мир вокруг
+                </h3>
+                <p
+                  class="advantages__description advantages__description--world"
+                >
                   Сделайте снимок и украсьте его смайликом или текстовой
-                  подписью, чтобы усилить эффект
+                  подписью, чтобы <br />
+                  усилить эффект
                 </p>
                 <picture>
                   <source
@@ -222,7 +235,7 @@
                     "
                   />
                   <img
-                    class="advantages__list-img"
+                    class="advantages__list-img advantages__list-img--world"
                     src="img/iphone-screen-mobile@1x.png"
                     srcset="img/iphone-screen-mobile@2x.png"
                     width="186"
@@ -233,10 +246,16 @@
               </li>
 
               <li class="advantages__item advantages__item--friends">
-                <h3 class="advantages__list-title">Заводит новых друзей</h3>
-                <p class="advantages__description">
+                <h3
+                  class="advantages__list-title advantages__list-title--friends"
+                >
+                  Заводит новых друзей
+                </h3>
+                <p
+                  class="advantages__description advantages__description--friends"
+                >
                   Ставьте лайки, комментируйте, делитесь фотографиями с друзьями
-                  и заводите новых друзей
+                  и заводите новых
                 </p>
                 <picture>
                   <source
@@ -281,8 +300,8 @@
                     class="advantages__list-img advantages__list-img--mobile"
                     src="img/iphone-screen-mobile@1x.png"
                     srcset="img/iphone-screen-mobile@2x.png"
-                    width="186"
-                    height="382"
+                    width="157"
+                    height="320"
                     alt="фотоприложение Пинк"
                   />
                 </picture>
@@ -293,15 +312,19 @@
 
         <div class="advantages__24-hours">
           <div class="container">
-            <h3 class="advantages__title">Эффект на 24 часа!</h3>
-            <p
-              class="advantages__description advantages__description--24 advantages__description--desktop"
-            >
-              Британские ученые провели исследования и доказали, что
-              положительный эффект от использования приложения длится целые
-              сутки!
-            </p>
-            <p class="advantages__learn-more">Узнать больше об исследовании</p>
+            <div class="advantages__timer">
+              <h3 class="advantages__title">Эффект <br />на 24 часа!</h3>
+              <p
+                class="advantages__description advantages__description--24 advantages__description--desktop"
+              >
+                Британские ученые провели исследования и доказали, что
+                положительный эффект от использования приложения длится целые
+                сутки!
+              </p>
+              <p class="advantages__learn-more">
+                Узнать больше об исследовании
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -344,7 +367,8 @@
                   <span class="tariff__name">База</span
                   ><span class="tariff__price">1,99 usd</span>
                 </th>
-                <th class="tariff__item">
+                <th class="tariff__item tariff__item--hit">
+                  <p class="tariff__hit">Хит</p>
                   <span class="tariff__name">Стандарт</span
                   ><span class="tariff__price">3,99 usd</span>
                 </th>
@@ -422,7 +446,7 @@
             Остались вопросы?<br />
             Свяжитесь с нами!
           </p>
-          <div>
+          <div class="contacts__tel-us">
             <p class="contacts__tel">Звоните:</p>
             <p class="contacts__tel-mobile">
               <a class="contacts__phone" href="tel:+78125556666"
@@ -473,7 +497,7 @@
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
-            <li class="social__item">
+            <li class="social__item social__item--twitter">
               <a class="social__link social__link--twitter" href="">
                 <span class="visually-hidden">Twitter</span>
                 <svg class="social__link-img" width="18" height="14">

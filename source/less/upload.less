@@ -1,6 +1,11 @@
 .upload__background {
   margin-bottom: 40px;
   background-color: @basic-cream;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 98px;
+    background-color: @basic-white;
+  }
 }
 
 .upload__wrapper {
@@ -10,6 +15,12 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 50px;
+    background-color: @basic-cream;
   }
 }
 
@@ -18,6 +29,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 40px;
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
@@ -25,6 +37,7 @@
   color: @basic-blue;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
     font-size: 18px;
   }
 }
@@ -36,6 +49,10 @@
   width: 280px;
   height: 55px;
   margin: 0 auto;
+  margin-bottom: 12px;
+  font-family: "Open Sans", sans-serif, "Arial";
+
+  font-size: 18px;
   font-weight: 700;
   line-height: 18px;
   text-decoration: none;
@@ -53,6 +70,7 @@
     width: 183px;
     height: 55px;
     margin: 10px;
+    margin-left: 5px;
   }
 }
 
@@ -63,6 +81,9 @@
   width: 280px;
   height: 55px;
   margin: 0 auto;
+  font-family: "Open Sans", sans-serif, "Arial";
+
+  font-size: 18px;
   font-weight: 700;
   line-height: 18px;
   text-align: center;
@@ -87,25 +108,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     grid-row-start: 1;
     grid-row-end: -3;
+    margin-top: 36px;
+    margin-right: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-right: 0;
   }
 }
 
 .upload__buttons {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 4px;
+
+  @media (min-width: @tablet-width) {
+    gap: 12px;
+    margin-bottom: 50px;
+    margin-left: 28px;
+  }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 410px;
-    gap: 0;
+    width: 425px;
+    gap: 20px;
     margin: 0;
     padding: 0;
   }
@@ -113,7 +146,19 @@
 
 .upload__img {
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 38px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 58px;
+    padding-bottom: 0;
+  }
+}
+
+.upload__img img {
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 400px;
+  }
 }
 
 .upload__tools {
@@ -121,8 +166,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 69px;
 
   @media (min-width: @desktop-width) {
     justify-content: start;
+    margin-top: 53px;
+    padding-bottom: 150px;
   }
 }

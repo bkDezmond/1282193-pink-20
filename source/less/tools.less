@@ -2,14 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 25px;
   margin: 0;
   padding: 0;
-  padding-bottom: 20px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
+    margin-left: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
 
@@ -22,20 +28,32 @@
   fill: @basic-blue;
   opacity: 0.3;
 
-  @media (min-width: @tablet-width) {
+  &--current {
     fill: @basic-red;
     opacity: 1;
   }
 
-  &--current {
+  @media (min-width: @tablet-width) {
+    width: 22px;
+    height: 22px;
     fill: @basic-red;
     opacity: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    height: auto;
   }
 }
 
 .tools__contrast {
   width: 55px;
   height: 50px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    height: auto;
+  }
 }
 
 .tools__item {
@@ -52,6 +70,35 @@
     padding-bottom: 20px;
     padding-right: 20px;
     border-bottom: 2px solid @basic-blue-opacity;
+
+    &--crop {
+      margin-top: 50px;
+      margin-bottom: 0;
+      padding-bottom: 17px;
+    }
+
+    &--fill {
+      margin-top: 4px;
+      margin-bottom: 0;
+      padding-bottom: 15px;
+    }
+
+    &--contrast {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 16px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-right: 66px;
+    padding: 0;
+    padding-right: 66px;
+
+    &--contrast {
+      border: none;
+    }
   }
 }
 
@@ -69,19 +116,23 @@
 
 .tools__scale-crop {
   position: absolute;
-  bottom: 20px;
-  left: -65%;
+  bottom: 5px;
+  left: -22%;
   width: 240px;
   height: 2px;
   background-color: @basic-blue;
 
   @media (min-width: @tablet-width) {
-    position: initial;
+    position: relative;
+    left: 23px;
+    top: -2px;
     width: 202px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 280px;
+    width: 288px;
+    left: 42px;
+    top: -2px;
   }
 }
 
@@ -94,12 +145,16 @@
   background-color: @basic-blue;
 
   @media (min-width: @tablet-width) {
-    position: initial;
+    position: relative;
+    left: 23px;
+    top: -4px;
     width: 202px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 280px;
+    width: 288px;
+    left: 42px;
+    top: -5px;
   }
 }
 
@@ -112,18 +167,22 @@
   background-color: @basic-blue;
 
   @media (min-width: @tablet-width) {
-    position: initial;
+    position: relative;
+    left: 23px;
+    top: -2px;
     width: 202px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 280px;
+    width: 288px;
+    left: 49px;
+    top: -5px;
   }
 }
 
 .tools__line {
   position: absolute;
-  top: 80%;
+  top: 75%;
   width: 120%;
   height: 2px;
   background-color: @basic-blue-opacity;
@@ -147,48 +206,63 @@
 
 .tools__toggle-crop {
   position: absolute;
-  top: 59px;
-  left: 135px;
-  width: 14px;
-  height: 14px;
+  top: 77px;
+  left: 180px;
+  width: 12px;
+  height: 12px;
   background-color: @basic-white;
   border: 2px solid @basic-red;
   border-radius: 50%;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 16px;
-    left: 215px;
-    width: 14px;
-    height: 14px;
+    top: 6px;
+    left: 204px;
+    width: 10px;
+    height: 10px;
     background-color: @basic-white;
     border: 2px solid @basic-red;
     border-radius: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 16px;
+    left: 167px;
   }
 }
 
 .tools__toggle-fill {
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 16px;
-    left: 100px;
-    width: 14px;
-    height: 14px;
+    top: 3px;
+    left: 83px;
+    width: 10px;
+    height: 10px;
     background-color: @basic-white;
     border: 2px solid @basic-red;
     border-radius: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 13px;
+    left: 345px;
   }
 }
 
 .tools__toggle-contrast {
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 16px;
-    left: 170px;
-    width: 14px;
-    height: 14px;
+    top: 5px;
+    left: 154px;
+    width: 10px;
+    height: 10px;
     background-color: @basic-white;
     border: 2px solid @basic-red;
     border-radius: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 7px;
+    left: 252px;
   }
 }

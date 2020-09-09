@@ -1,14 +1,30 @@
+.contacts {
+  position: relative;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 64px;
+  }
+}
+
 .contacts__wrapper {
   display: grid;
+  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content min-content;
+    margin-bottom: 5px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content min-content;
+    margin-bottom: 0;
   }
 }
 
@@ -18,7 +34,7 @@
   align-items: center;
   margin: 0;
   padding: 0;
-  padding-bottom: 45px;
+  padding-bottom: 37px;
   font-size: 24px;
   line-height: 120%;
   text-align: center;
@@ -45,12 +61,15 @@
   align-items: center;
   margin: 0;
   padding: 0;
-  padding-bottom: 13px;
   line-height: 25px;
   font-weight: 700;
   font-style: normal;
   text-align: center;
   color: @basic-blue;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .contacts__phone,
@@ -73,27 +92,73 @@
 .contacts__adress-street {
   margin: 0;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 18px;
 }
 
 .contacts__welcome {
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 3;
+    margin-top: 29px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: auto;
+    margin-top: 2px;
   }
 }
 
 .contacts__write-us {
+  @media (min-width: @tablet-width) {
+    padding-left: 13px;
+  }
+
   @media (min-width: @desktop-width) {
     order: 2;
+    margin-top: 2px;
+  }
+}
+
+.contacts__tel-us {
+  @media (min-width: @tablet-width) {
+    padding-right: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 2px;
+  }
+}
+
+.contacts__map::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  bottom: 80px;
+  width: 100%;
+  height: 130px;
+  background-image: url("../img/bg-triangle-white-footer.svg");
+  background-repeat: no-repeat;
+  background-size: 101% auto;
+
+  @media (min-width: @tablet-width) {
+    bottom: 254px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 248px;
+    height: 264px;
   }
 }
 
 .contacts__map iframe {
   width: 100%;
-  height: auto;
+  height: 200px;
+
+  @media (min-width: @tablet-width) {
+    height: 374px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 502px;
+  }
 }

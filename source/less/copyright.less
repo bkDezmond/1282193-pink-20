@@ -7,6 +7,18 @@
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 8px;
+
+    &--photo {
+      padding-top: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .copyright__text {
@@ -16,6 +28,10 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .copyright__link {
