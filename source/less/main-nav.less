@@ -1,29 +1,34 @@
-@media (min-width: @tablet-width) {
-  .main-nav__wrapper {
+.main-nav__wrapper {
+  @media (min-width: @tablet-width) {
     justify-content: space-between;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .main-nav__wrapper {
+  @media (min-width: @desktop-width) {
     width: auto;
+    background-color: @basic-black-opacity;
   }
 }
 
 .main-nav__list {
   margin: 0;
-  margin-top: 49px;
+  margin-top: 70px;
   padding: 0;
   list-style: none;
   text-transform: uppercase;
-}
 
-@media (min-width: @desktop-width) {
-  .main-nav__list {
+  @media (min-width: @tablet-width) {
+    margin-top: 110px;
+  }
+
+  @media (min-width: @desktop-width) {
     display: flex;
-    justify-content: space-between;
-    width: 680px;
+    justify-content: flex-end;
+    width: 630px;
+    min-height: 95px;
     margin: 0 auto;
+    gap: 81px;
+    margin-right: 136px;
+    padding-top: 22px;
   }
 }
 
@@ -33,6 +38,8 @@
   padding: 0;
   margin: 0;
   margin-bottom: 30px;
+  min-height: 70px;
+  background-color: @basic-black-opacity;
 }
 
 .main-nav__toggle {
@@ -50,9 +57,17 @@
 
 .main-nav--opened {
   background-color: @basic-blue;
+  transform: translateY(-130px);
+  margin-bottom: -115px;
+
+  @media (min-width: @tablet-width) {
+    transform: translateY(-130px);
+  }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 0;
     background-color: transparent;
+    transform: translateY(0);
   }
 }
 
@@ -72,7 +87,8 @@
   background-image: url("../img/icon-menu-burger.svg");
 
   @media (min-width: @tablet-width) {
-    right: 25px;
+    top: 43px;
+    right: 21px;
   }
 
   @media (min-width: @desktop-width) {
@@ -83,14 +99,15 @@
 .main-nav--opened .main-nav__toggle {
   content: "";
   position: absolute;
-  top: 23px;
-  right: 23px;
+  top: 22px;
+  right: 21px;
   width: 23px;
   height: 23px;
   background-image: url("../img/icon-menu-cross.svg");
 
   @media (min-width: @tablet-width) {
-    right: 25px;
+    top: 43px;
+    right: 21px;
   }
 
   @media (min-width: @desktop-width) {
@@ -107,18 +124,16 @@
   display: block;
 }
 
-@media (max-width: @mobile-width-only), (min-width: @tablet-width) {
-  .main-nav--closed .site-list__item {
+.main-nav--closed .site-list__item {
+  @media (max-width: @mobile-width-only), (min-width: @tablet-width) {
     display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
 .main-nav--nojs .main-nav__toggle {
   display: none;
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav--closed .site-list__item {
-    display: block;
-  }
 }
