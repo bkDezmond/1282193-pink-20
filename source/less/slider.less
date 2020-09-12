@@ -1,0 +1,45 @@
+.slider__toggle {
+  padding: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+
+  background: @basic-blue;
+  opacity: 0.3;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+
+  &--current {
+    background: @basic-white;
+    border: 3px solid @basic-blue;
+    opacity: 1;
+  }
+}
+
+.slider__toggle--left {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    background: none;
+    border: none;
+  }
+}
+
+.slider__toggle--right {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: absolute;
+    top: 42px;
+    right: 18px;
+    background: none;
+    border: none;
+  }
+}

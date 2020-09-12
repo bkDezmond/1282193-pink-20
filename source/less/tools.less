@@ -22,6 +22,16 @@
 .tools__button {
   border: none;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.tools__button svg:hover {
+  fill: @basic-blue;
+  opacity: 0.5;
+}
+
+.tools__button svg:active {
+  opacity: 0.3;
 }
 
 .tools__img {
@@ -192,8 +202,10 @@
   }
 }
 
-.tools__toggle {
+.tools__toggle,
+.tools__toggle-crop {
   display: none;
+  cursor: pointer;
 
   &--current {
     display: block;
@@ -202,6 +214,10 @@
   @media (min-width: @tablet-width) {
     display: block;
   }
+}
+
+.tools__toggle:active {
+  background-color: @basic-red;
 }
 
 .tools__toggle-crop {

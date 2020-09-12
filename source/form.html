@@ -10,7 +10,7 @@
     <header class="page-header page-header--form page-header--opened">
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__wrapper">
-          <a class="page-header__logo">
+          <a href="index.html" class="page-header__logo">
             <picture>
               <source
                 media="(min-width: 1200px)"
@@ -30,6 +30,58 @@
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
+            <svg
+              class="main-nav__burger"
+              version="1.0"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="49.945px"
+              height="24.007px"
+              viewBox="0 0 49.945 24.007"
+              enable-background="new 0 0 49.945 24.007"
+              xml:space="preserve"
+            >
+              <g id="miu">
+                <g id="editor_list_view_hambuger_menu_glyph">
+                  <g>
+                    <path
+                      id="path-1"
+                      fill="#FFFFFF"
+                      d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      id="path-1_1_"
+                      fill="#FFFFFF"
+                      d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"
+                    />
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <svg
+              class="main-nav__cross"
+              version="1.0"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="23.867px"
+              height="23.867px"
+              viewBox="0 0 23.867 23.867"
+              enable-background="new 0 0 23.867 23.867"
+              xml:space="preserve"
+            >
+              <path
+                fill="#FFFFFF"
+                d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"
+              />
+            </svg>
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -43,13 +95,13 @@
               </a>
             </li>
             <li class="site-list__item site-list__item--active">
-              <a class="site-list__link">
+              <a class="site-list__link site-list__link--current">
                 Конкурс
               </a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="">
-                Html Academy
+                HTML Academy
               </a>
             </li>
           </ul>
@@ -86,12 +138,12 @@
         >
           <fieldset class="form__section form__section--username">
             <legend class="visually-hidden">ФИО</legend>
-            <div class="container">
+            <div class="form__container">
               <div class="form__contest form__contest--username-list">
                 <p class="form__info form__info--id">
                   <label class="form__title" for="surname">Фамилия:</label>
                   <input
-                    class="form__enter-surname form__placeholder"
+                    class="form__enter form__enter-surname form__placeholder"
                     type="text"
                     id="surname"
                     name="surname-surname"
@@ -102,7 +154,7 @@
                 <p class="form__info form__info--id">
                   <label class="form__title" for="name">Имя:</label>
                   <input
-                    class="form__enter-name form__enter-name--long form__placeholder"
+                    class="form__enter form__enter-name form__enter-name--long form__placeholder"
                     type="text"
                     id="name"
                     name="name-name"
@@ -113,7 +165,7 @@
                 <p class="form__info form__info--id">
                   <label class="form__title" for="middlename">Отчество:</label>
                   <input
-                    class="form__enter-middlename form__placeholder"
+                    class="form__enter form__enter-middlename form__placeholder"
                     type="text"
                     id="middlename"
                     name="middlename-middlename"
@@ -123,85 +175,94 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="form__section form__section--achievments-section">
-            <legend
-              class="form__title form__title--position form__title--achievments-title"
-            >
-              Ваши безбашенные достижения в путешествии
-            </legend>
-            <div class="container">
-              <div class="form__contest form__contest--achievments">
-                <ul class="form__list-checkbox">
-                  <li class="form__item-checkbox">
-                    <input
-                      class="form__input-checkbox"
-                      type="checkbox"
-                      name="selfie"
-                      id="selfie"
-                    />
-                    <label for="selfie" class="form__checkbox-title"
-                      >Сделал селфи с акулой</label
+          <div class="form__section form__section--achievments-section">
+            <fieldset class="form__achievments-box">
+              <legend
+                class="form__title form__title--position form__title--achievments-title"
+              >
+                Ваши безбашенные достижения в путешествии
+              </legend>
+              <div class="container">
+                <div class="form__contest form__contest--achievments">
+                  <ul class="form__list-checkbox">
+                    <li class="form__item-checkbox form__item-checkbox--selfie">
+                      <input
+                        class="visually-hidden form__input-checkbox"
+                        type="checkbox"
+                        name="selfie"
+                        id="selfie"
+                        checked
+                      />
+                      <label for="selfie" class="form__checkbox-title"
+                        >Сделал селфи с акулой</label
+                      >
+                    </li>
+                    <li class="form__item-checkbox form__item-checkbox--beach">
+                      <input
+                        class="visually-hidden form__input-checkbox"
+                        type="checkbox"
+                        name="beach"
+                        id="beach"
+                        checked
+                      />
+                      <label for="beach" class="form__checkbox-title"
+                        >Обгорел на пляже</label
+                      >
+                    </li>
+                    <li
+                      class="form__item-checkbox form__item-checkbox--chuck-norris"
                     >
-                  </li>
-                  <li class="form__item-checkbox">
-                    <input
-                      class="form__input-checkbox"
-                      type="checkbox"
-                      name="beach"
-                      id="beach"
-                    />
-                    <label for="beach" class="form__checkbox-title"
-                      >Обгорел на пляже</label
+                      <input
+                        class="visually-hidden form__input-checkbox"
+                        type="checkbox"
+                        name="chuck-norris"
+                        id="chuck-norris"
+                      />
+                      <label for="chuck-norris" class="form__checkbox-title"
+                        >Видел Чака Норриса</label
+                      >
+                    </li>
+                    <li
+                      class="form__item-checkbox form__item-checkbox--souvenir"
                     >
-                  </li>
-                  <li class="form__item-checkbox">
-                    <input
-                      class="form__input-checkbox"
-                      type="checkbox"
-                      name="chuck-norris"
-                      id="chuck-norris"
-                    />
-                    <label for="chuck-norris" class="form__checkbox-title"
-                      >Видел Чака Норриса</label
-                    >
-                  </li>
-                  <li class="form__item-checkbox">
-                    <input
-                      class="form__input-checkbox"
-                      type="checkbox"
-                      name="souvenir"
-                      id="souvenir"
-                    />
-                    <label for="souvenir" class="form__checkbox-title"
-                      >Накупил сувениров</label
-                    >
-                  </li>
-                  <li class="form__item-checkbox">
-                    <input
-                      class="form__input-checkbox"
-                      type="checkbox"
-                      name="tower"
-                      id="tower"
-                    />
-                    <label for="tower" class="form__checkbox-title"
-                      >Удержал башню</label
-                    >
-                  </li>
-                  <li class="form__item-checkbox">
-                    <input
-                      class="form__input-checkbox"
-                      type="checkbox"
-                      name="hotel"
-                      id="hotel"
-                    />
-                    <label for="hotel" class="form__checkbox-title"
-                      >Разгромил отель</label
-                    >
-                  </li>
-                </ul>
+                      <input
+                        class="visually-hidden form__input-checkbox"
+                        type="checkbox"
+                        name="souvenir"
+                        id="souvenir"
+                      />
+                      <label for="souvenir" class="form__checkbox-title"
+                        >Накупил сувениров</label
+                      >
+                    </li>
+                    <li class="form__item-checkbox form__item-checkbox--tower">
+                      <input
+                        class="visually-hidden form__input-checkbox"
+                        type="checkbox"
+                        name="tower"
+                        id="tower"
+                        checked
+                      />
+                      <label for="tower" class="form__checkbox-title"
+                        >Удержал башню</label
+                      >
+                    </li>
+                    <li class="form__item-checkbox form__item-checkbox--hotel">
+                      <input
+                        class="visually-hidden form__input-checkbox"
+                        type="checkbox"
+                        name="hotel"
+                        id="hotel"
+                      />
+                      <label for="hotel" class="form__checkbox-title"
+                        >Разгромил отель</label
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </fieldset>
+            </fieldset>
+          </div>
           <fieldset class="form__section form__section--contacts">
             <legend
               class="form__title form__title--position form__title--contacts-title"
@@ -210,7 +271,9 @@
             </legend>
             <div class="container">
               <div class="form__contest form__contest--contacts">
-                <p class="form__info form__info--id-contacts">
+                <p
+                  class="form__info form__info--id-contacts form__info--id-phone"
+                >
                   <label
                     class="form__title form__title-contact"
                     for="telephone"
@@ -218,19 +281,23 @@
                     Номер телефона</label
                   >
                   <input
-                    class="form__enter-telephone form__placeholder"
+                    class="form__enter form__enter-telephone form__placeholder"
                     type="tel"
                     id="telephone"
                     name="telephone-telephone"
                     placeholder="Номер, пожалуйста"
                   />
                 </p>
-                <p class="form__info form__info--id-contacts">
-                  <label class="form__title form__title-contact" for="email"
+                <p
+                  class="form__info form__info--id-contacts form__info--id-mail"
+                >
+                  <label
+                    class="form__title form__title-contact form__title-contact--last"
+                    for="email"
                     >Адрес почты</label
                   >
                   <input
-                    class="form__enter-email form__placeholder"
+                    class="form__enter form__enter-email form__placeholder"
                     type="email"
                     id="email"
                     name="email-email"
@@ -241,60 +308,64 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="form__section form__section--application-section">
-            <legend
-              class="form__title form__title--position form__title--apps-title"
-            >
-              С каким приложением путешествовали?
-            </legend>
-            <div class="form__contest form__contest--application">
-              <ul class="form__list-radio">
-                <li class="form__item-radio">
-                  <input
-                    class="form__input-radio"
-                    type="radio"
-                    name="ios"
-                    id="ios"
-                  />
-                  <label for="ios" class="form__checkbox-title"
-                    >Pink для iOS</label
-                  >
-                </li>
-                <li class="form__item-radio">
-                  <input
-                    class="form__input-radio"
-                    type="radio"
-                    name="android"
-                    id="android"
-                  />
-                  <label for="android" class="form__checkbox-title"
-                    >Pink на Andriod</label
-                  >
-                </li>
-                <li class="form__item-radio">
-                  <input
-                    class="form__input-radio"
-                    type="radio"
-                    name="windows-phone"
-                    id="windows-phone"
-                  />
-                  <label for="windows-phone" class="form__checkbox-title"
-                    >Windows Phone</label
-                  >
-                </li>
-              </ul>
+          <div class="form__section form__section--application-section">
+            <div class="form__container">
+              <fieldset class="form__application-box">
+                <legend
+                  class="form__title form__title--position form__title--apps-title"
+                >
+                  С каким приложением путешествовали?
+                </legend>
+                <div class="form__contest form__contest--application">
+                  <ul class="form__list-radio">
+                    <li class="form__item-radio">
+                      <input
+                        class="visually-hidden form__input-radio"
+                        type="radio"
+                        name="radio"
+                        id="ios"
+                      />
+                      <label for="ios" class="form__radio-title"
+                        >Pink для iOS</label
+                      >
+                    </li>
+                    <li class="form__item-radio">
+                      <input
+                        class="visually-hidden form__input-radio"
+                        type="radio"
+                        name="radio"
+                        id="android"
+                      />
+                      <label for="android" class="form__radio-title"
+                        >Pink на Android</label
+                      >
+                    </li>
+                    <li class="form__item-radio">
+                      <input
+                        class="visually-hidden form__input-radio"
+                        type="radio"
+                        name="radio"
+                        id="windows-phone"
+                      />
+                      <label for="windows-phone" class="form__radio-title"
+                        >Windows Phone</label
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
             </div>
-          </fieldset>
-          <fieldset class="form__section form__section--emotions">
+          </div>
+          <fieldset class="form__section form__section--emotions container">
             <legend
               class="form__title form__title--position form__title--emotion-title"
             >
               Опишите свои эмоции
             </legend>
-            <div class="container">
+            <div class="">
               <p class="form__emotions-text">
                 <textarea
-                  class="form__input-area form__placeholder"
+                  class="form__input-area form__placeholder form__placeholder--area"
                   type="text"
                   name="message"
                   id="emote-message"
@@ -306,9 +377,13 @@
             </div>
           </fieldset>
           <div class="form__button">
-            <button class="form__send" type="submit">Отправить форму</button>
+            <button class="form__send" type="submit">
+              Отправить форму
+            </button>
             <p class="form__required-info">
-              <span class="form__star">*</span>— обязательные поля
+              <span class="form__star">*</span>— обязательные
+              <span class="form__fields"> для заполнения </span>
+              поля
             </p>
           </div>
         </form>
@@ -316,7 +391,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
-        <a class="page-footer__logo">
+        <a href="index.html" class="page-footer__logo">
           <picture>
             <source
               media="(min-width: 1200px)"
@@ -360,12 +435,17 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <p class="copyright__text">Разработано</p>
           <a
             class="copyright__link"
             href="https://htmlacademy.ru/intensive/adaptive"
+            ><span class="copyright__dev">Разработано</span
             ><span class="visually-hidden">HTML Academy</span>
-            <svg class="copyright__icon" width="27" height="34">
+            <svg
+              class="copyright__icon"
+              width="27"
+              height="34"
+              fill="currentColor"
+            >
               <use xlink:href="img/sprite.svg#academy-icon"></use>
             </svg>
           </a>

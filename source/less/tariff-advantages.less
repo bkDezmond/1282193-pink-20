@@ -12,8 +12,19 @@
   font-size: 14px;
   line-height: 30px;
   color: @basic-blue;
-
   border: 2px solid @basic-gray;
+
+  &--yes {
+    background-image: url("../img/yes-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 230px 18px;
+  }
+
+  &--no {
+    background-image: url("../img/icon-no.svg");
+    background-repeat: no-repeat;
+    background-position: 230px 18px;
+  }
 
   @media (max-width: @mobile-width-only) {
     text-transform: uppercase;
@@ -21,12 +32,15 @@
 
   @media (min-width: @tablet-width) {
     width: 153px;
-    height: 42px;
+    height: 41px;
+    padding-left: 14px;
+    background-position: center;
   }
 
   @media (min-width: @desktop-width) {
     width: 233px;
-    height: 58px;
+    height: 55px;
+    padding-left: 21px;
     font-size: 18px;
   }
 }

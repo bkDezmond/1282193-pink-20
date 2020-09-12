@@ -1,7 +1,6 @@
 .copyright {
   display: grid;
   grid-template-columns: min-content min-content;
-  gap: 15px;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -34,9 +33,39 @@
   }
 }
 
+.copyright__icon {
+  margin-left: 14px;
+}
+
+.copyright__link:hover {
+  color: @basic-blue;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
+}
+
 .copyright__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: @basic-red;
+  margin-right: 15px;
+  font-family: "Open Sans", sans-serif, "Arial";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-decoration: none;
+  color: @basic-red;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.copyright__dev {
+  color: @basic-blue;
 }

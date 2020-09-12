@@ -1,5 +1,10 @@
 .reviews__wrapper {
+  position: relative;
   .container();
+}
+
+.reviews {
+  position: relative;
 }
 
 .reviews__author-info {
@@ -76,6 +81,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+  margin-right: 2px;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
@@ -84,4 +98,18 @@
 
 .reviews__item {
   margin: 0;
+}
+
+.reviews__item::before {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: 46%;
+    width: 80px;
+    height: 70px;
+    background-image: url("../img/icon-quotes.svg");
+    background-repeat: no-repeat;
+    opacity: 0.1;
+  }
 }
