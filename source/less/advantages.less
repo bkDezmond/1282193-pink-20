@@ -382,12 +382,16 @@
   }
 }
 
+.advantages__timer {
+  position: relative;
+}
+
 .advantages__timer::before {
   @media (min-width: @tablet-width) {
     content: "24";
     position: absolute;
-    top: -14px;
-    left: -38px;
+    top: -5%;
+    right: 52%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -404,7 +408,7 @@
 
   @media (min-width: @desktop-width) {
     top: -38px;
-    left: 130px;
+    left: 0;
     width: 300px;
     font-size: 120px;
     background: url("../img/diagram-fill.svg"), url("../img/timer.svg");

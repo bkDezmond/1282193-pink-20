@@ -19,3 +19,25 @@
     box-shadow: none;
   }
 }
+
+.site-list__link:hover {
+  color: @basic-red;
+}
+
+.site-list__link:active {
+  opacity: 0.3;
+
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+    opacity: 0.3;
+  }
+}
+
+.site-list__link--current,
+.site-list__link--current:hover {
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+    opacity: 1;
+    border-bottom: 2px solid @basic-white;
+  }
+}

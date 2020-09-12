@@ -3,6 +3,17 @@
 
   @media (max-width: @mobile-width-only) {
     display: block;
-    margin: 20px;
+    padding: 2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+    background: @basic-blue;
+    opacity: 0.3;
+    &--current {
+      background: @basic-white;
+      border: 3px solid @basic-blue;
+      opacity: 1;
+    }
   }
 }

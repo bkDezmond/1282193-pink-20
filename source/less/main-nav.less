@@ -23,11 +23,10 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: flex-end;
-    width: 630px;
+    width: 940px;
     min-height: 95px;
     margin: 0 auto;
-    gap: 81px;
-    margin-right: 136px;
+    gap: 79px;
     padding-top: 22px;
   }
 }
@@ -44,7 +43,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 0;
+  top: 6px;
   right: 0;
   z-index: 2;
   display: block;
@@ -53,6 +52,15 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    top: 28px;
+    right: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav--opened {
@@ -65,7 +73,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 0;
+    margin-bottom: 30px;
     background-color: transparent;
     transform: translateY(0);
   }
@@ -77,23 +85,55 @@
   }
 }
 
-.main-nav--closed .main-nav__toggle {
+.main-nav--closed .main-nav__burger {
+  display: block;
+  position: absolute;
+  top: 14px;
+  right: 11px;
+  width: 50px;
+  height: 24px;
+}
+
+.main-nav--opened .main-nav__burger {
+  display: none;
+}
+
+.main-nav--closed .main-nav__cross {
+  display: none;
+}
+
+.main-nav--opened .main-nav__cross {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: -14px;
+  width: 50px;
+  height: 24px;
+}
+
+.main-nav__burger path:hover {
+  fill: @basic-red;
+}
+
+.main-nav__cross path:hover {
+  fill: @basic-red;
+}
+
+.main-nav__burger path:active {
+  opacity: 0.3;
+}
+
+.main-nav__cross path:active {
+  opacity: 0.3;
+}
+
+.main-nav--closed .main__nav__toggle {
   content: "";
   position: absolute;
   top: 21px;
   right: 20px;
   width: 50px;
   height: 24px;
-  background-image: url("../img/icon-menu-burger.svg");
-
-  @media (min-width: @tablet-width) {
-    top: 43px;
-    right: 21px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -103,15 +143,10 @@
   right: 21px;
   width: 23px;
   height: 23px;
-  background-image: url("../img/icon-menu-cross.svg");
 
   @media (min-width: @tablet-width) {
     top: 43px;
     right: 21px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
   }
 }
 
