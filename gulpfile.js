@@ -9,9 +9,10 @@ const imagemin = require("gulp-imagemin");
 const rename = require("gulp-rename");
 const svgstore = require("gulp-svgstore");
 const sync = require("browser-sync").create();
-const posthtml = require("gulp-posthtml");
 const del = require("del");
 const webp = require("gulp-webp");
+const htmlmin = require("gulp-htmlmin");
+const jsminify = require("gulp-uglify");
 
 //del
 
@@ -60,10 +61,19 @@ const sprite = () => {
 //html
 
 const html = () => {
-  return gulp.src("source/*.html").pipe(posthtml()).pipe(gulp.dest("build"));
+  return gulp.src("source/*.html").pipe(gulp.dest("build")).pipe(sync.stream());
 };
 
 exports.html = html;
+
+const minify = () => {
+  return gulp
+    .src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+};
+
+exports.minify = minify;
 
 //img
 
@@ -78,6 +88,8 @@ const images = () => {
       ])
     );
 };
+
+exports.images = images;
 
 //webp
 
@@ -94,7 +106,20 @@ const webpimage = () => {
 
 exports.webpimage = webpimage;
 
-const build = gulp.series(clean, copy, styles, webpimage, sprite, html);
+//js
+
+const js = () => {
+  return gulp
+    .src(["source/js/*.js"])
+    .pipe(jsminify())
+    .pipe(rename("index.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+};
+
+exports.js = js;
+
+const build = gulp.series(clean, copy, styles, webpimage, sprite, js, html);
 
 exports.build = build;
 
@@ -117,10 +142,9 @@ exports.serve = serve;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/*.html").on("change", gulp.series(html));
-  return gulp.src("source/*.html").pipe(gulp.dest("build")).pipe(sync.stream());
+  gulp.watch("source/js/*.js").on("change", gulp.series(js));
 };
 
-exports.default = gulp.series(build, serve, watcher);
+exports.default = gulp.series(build, serve, js, watcher);
