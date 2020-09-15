@@ -3,6 +3,11 @@
 
   &--photo {
     margin-bottom: 38px;
+
+    @media (min-width: @desktop-width) {
+      padding-right: 0;
+      margin-left: 12px;
+    }
   }
 
   &--index {
@@ -11,13 +16,6 @@
 
   @media (min-width: @tablet-width) {
     padding-right: 12px;
-  }
-
-  &--photo {
-    @media (min-width: @desktop-width) {
-      padding-right: 0;
-      margin-left: 12px;
-    }
   }
 }
 
