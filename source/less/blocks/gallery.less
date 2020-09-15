@@ -1,3 +1,7 @@
+.gallery {
+  position: relative;
+}
+
 .gallery__wrapper {
   .container();
 }
@@ -65,7 +69,7 @@
 
   &--photo-of-day {
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     text-align: center;
   }
 
@@ -107,6 +111,11 @@
       margin: 0;
     }
   }
+}
+
+.gallery__author-link {
+  color: @basic-black;
+  text-decoration: none;
 }
 
 .gallery__post-time {
@@ -190,19 +199,21 @@
 
 .gallery__likes-img {
   position: absolute;
-  left: 17px;
+  left: 11px;
   bottom: 24px;
-  width: 13px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   fill: @basic-red;
+  border: none;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    left: 256px;
-    bottom: 31px;
+    left: 250px;
+    bottom: 26px;
 
     &--tablet {
       top: 6px;
-      left: 105px;
+      left: 100px;
     }
   }
 }
@@ -214,6 +225,12 @@
   margin: 17px;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media (max-width: @mobile-width-only) {
+    &--day {
+      margin-top: 16px;
+    }
+  }
 }
 
 .gallery__photo-of-the-day {
@@ -240,7 +257,6 @@
 }
 
 .gallery__post-of-day-wrapper {
-  position: relative;
   margin: 0;
   padding-bottom: 15px;
 
@@ -254,7 +270,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0;
+  top: 142px;
   right: 20px;
   width: 140px;
   height: 36px;
@@ -266,11 +282,11 @@
   background-color: @basic-red;
 
   @media (min-width: @tablet-width) {
-    top: 57px;
+    top: 192px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 54px;
+    top: 202px;
     right: 130px;
   }
 }

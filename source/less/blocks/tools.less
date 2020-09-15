@@ -1,4 +1,18 @@
 .tools {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 69px;
+
+  @media (min-width: @desktop-width) {
+    justify-content: start;
+    margin-top: 53px;
+    padding-bottom: 150px;
+  }
+}
+
+.tools__list {
   display: flex;
   justify-content: center;
   align-items: center;

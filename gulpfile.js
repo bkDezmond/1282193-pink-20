@@ -12,6 +12,9 @@ const sync = require("browser-sync").create();
 const posthtml = require("gulp-posthtml");
 const del = require("del");
 const webp = require("gulp-webp");
+const htmlmin = require("gulp-htmlmin");
+const jsminify = require("gulp-uglify");
+const cssmin = require('gulp-cssmin');
 
 //del
 
@@ -39,6 +42,7 @@ const styles = () => {
     .pipe(less())
     .pipe(postcss([autoprefixer()]))
     .pipe(csso())
+    .pipe(cssmin())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
@@ -46,6 +50,7 @@ const styles = () => {
 };
 
 exports.styles = styles;
+
 
 //svg
 
