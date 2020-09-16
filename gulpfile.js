@@ -14,6 +14,7 @@ const webp = require("gulp-webp");
 const htmlmin = require("gulp-htmlmin");
 const jsminify = require("gulp-uglify");
 const cssmin = require('gulp-cssmin');
+const cleanCSS = require('gulp-clean-css');
 
 //del
 
@@ -39,9 +40,10 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
+    .pipe(gulp.dest("build/css"))
     .pipe(postcss([autoprefixer()]))
     .pipe(csso())
-    .pipe(cssmin())
+    .pipe(cleanCSS())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
